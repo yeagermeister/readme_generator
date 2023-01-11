@@ -1,3 +1,6 @@
+#Added due to class requirements
+.DS_Store
+
 # Logs
 logs
 *.log
