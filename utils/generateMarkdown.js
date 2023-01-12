@@ -24,7 +24,6 @@ function renderLicenseBadge(license) {
 			let badge = `${item.badge}(${item.url})`;
 			let licLink = item.url;
 			let longname = item.longname;
-			// console.log(badge, licLink)
 			return [badge, licLink, longname]
 		}
 	}
