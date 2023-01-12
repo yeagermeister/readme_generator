@@ -41,6 +41,15 @@ function generateMarkdown(data) {
 	const title = `# ${data.name}`;
 	const description = `${license[0]}     
 ${data.description}`;
+	const toc = `
+Table of Contents
+=================
+* [Installation Instructions](#s)
+* [Usage Instructions](## Usage)
+* [Contribution Guidelines](## Contribution Guidelines)
+* [Testing Instructions](## Testing Instructions)
+* [License Inforamtion](## License Inforamtion)
+* [Questions](#markdown-header-questions)`
 	const install = `## Installation Instructions\n	${data.install}`;
 	const usage = `## Usage
 	${data.usage}`;
@@ -58,6 +67,7 @@ This project is covered under the ${license[2]}\n
 	// load all of the sections into one variable to pass back
 	const readme = `${title}
 ${description}
+${toc}
 ${install}
 ${usage}
 ${contrib}
