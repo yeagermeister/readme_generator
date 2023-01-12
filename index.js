@@ -61,10 +61,15 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(answers) {
-	console.log(answers);
-	fs.writeFile(`./README.md`, `${answers.email}`, (err) =>
-	err ? console.error(err) : console.log('README.md created!')
-	);
+	// fs.writeFile(`./README.md`, `${answers.email}`, (err) =>
+	// err ? console.error(err) : console.log('README.md created!')
+	// );
+	// This is not good code to generate this page, the code to generate the page could be right here, but calling generate to adhere to the assigment.
+	generate(answers);
+	// fs.writeFile(`./README.md`, `${daata.title}`, (err) =>
+	// err ? console.error(err) : console.log('README.md created!')
+	// );
+
 }
 
 // TODO: Create a function to initialize app
