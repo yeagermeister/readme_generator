@@ -20,8 +20,9 @@ function renderLicenseBadge(license) {
 		if (license == item.name) {
 			let badge = `${item.badge}(${item.url})`;
 			let licLink = item.url;
+			let longname = item.longname;
 			// console.log(badge, licLink)
-			return [badge, licLink]
+			return [badge, licLink, longname]
 		}
 	}
 };
@@ -38,7 +39,8 @@ function generateMarkdown(data) {
 	// Load the different sections into variables.   
 	// Generate a TOC
 	const title = `# ${data.name}`;
-	const description = `${license[0]}     ${data.description}`;
+	const description = `${license[0]}     
+${data.description}`;
 	const install = `## Installation Instructions\n	${data.install}`;
 	const usage = `## Usage
 	${data.usage}`;
@@ -47,7 +49,7 @@ function generateMarkdown(data) {
 	const test = `## Testing instructions
 	${data.test}`;
 	const lic = `## License Inforamtion
-\n
+This project is covered under the ${license[2]}\n
 	${license[1]}`;
 	const questions = `## Questions
 [Github](https://github.com/${data.github}/)
@@ -61,7 +63,7 @@ ${usage}
 ${contrib}
 ${test}
 ${lic}
-${questions}}`
+${questions}`
 
 return(readme);
 }

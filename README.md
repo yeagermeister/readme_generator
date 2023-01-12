@@ -1,18 +1,18 @@
-# Springhunters
-hunt springs
+# temp
+[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)     
+temp
 ## Installation Instructions
-	na
+	n
 ## Usage
-	na
+	n
 ## Contribution Guidelines
-	na
+	n
 ## Testing instructions
-	na
+	n
 ## License Inforamtion
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This project is covered under the BSD 2-Clause "Simplified" License
 
-	https://opensource.org/licenses/MIT
-## Github Repository
-	[yeagermeister](https://github.com/yeagermeister/)
-## Contact Information
-	john@home.net
+	https://opensource.org/licenses/BSD-2-Clause
+## Questions
+[Github](https://github.com/yeagermeister/)
+	Email: na@home.net}
