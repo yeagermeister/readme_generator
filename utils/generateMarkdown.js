@@ -1,4 +1,4 @@
-//A function that returns a license badge based on which license is passed in
+//A function that returns a license badge and url, based on which license is passed in
 function renderLicenseBadge(license) {
 	let licenseArray = [
 		{name: "apache", badge: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]', url: 'https://opensource.org/licenses/Apache-2.0'}, 
@@ -19,61 +19,53 @@ function renderLicenseBadge(license) {
 	for (const item of licenseArray) {
 		if (license == item.name) {
 			let badge = `${item.badge}(${item.url})`;
-			let liclink = item.url;
+			let licLink = item.url;
+			// console.log(badge, licLink)
+			return [badge, licLink]
 		}
 	}
 };
 
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
+//A function to generate markdown for README
 function generateMarkdown(data) {
 	let license = data.license.toString();
 
 	// If there is no license, return an empty string
 	if (license) {
-		renderLicenseBadge(license);
+		license = renderLicenseBadge(license);
 	} else license = 'none';
 
+	// Load the different sections into variables.   
+	// Generate a TOC
+	const title = `# ${data.name}`;
+	const description = `${data.description}`;
+	const install = `## Installation Instructions\n	${data.install}`;
+	const usage = `## Usage
+	${data.usage}`;
+	const contrib = `## Contribution Guidelines
+	${data.contrib}`;
+	const test = `## Testing instructions
+	${data.test}`;
+	const lic = `## License Inforamtion
+${license[0]}\n
+	${license[1]}`;
+	const github = `## Github Repository
+	[${data.github}](https://github.com/${data.github}/)`;
+	const contact = `## Contact Information
+	${data.email}`;
 
-// 	const title = `# ${data.name}`;
-// 	const description = `${data.description}`;
-// 	const install = `## Installation Instructions\n	${data.install}`;
-// 	const usage = `## Usage
-// 	${data.usage}`;
-// 	const contrib = `## Contribution Guidelines
-// 	${data.contrib}`;
-// 	const test = `## Testing instructions
-// 	${data.test}`;
-// 	const lic = `## License Inforamtion`;
-// 	const github = `## Github Repository
-// 	https://github.com/${data.github}/`;
-// 	const contact = `## Contact Information
-// 	${data.email}`;
+	// load all of the sections into one variable to pass back
+	const readme = `${title}
+${description}
+${install}
+${usage}
+${contrib}
+${test}
+${lic}
+${github}
+${contact}`
 
-// 	const readme = `${title}
-// ${description}
-// ${install}
-// ${usage}
-// ${contrib}
-// ${test}
-// ${lic}
-// 	${license}
-// ${github}
-// ${contact}`
-
-//   return `# ${data.title}
-
-// `;
-// console.log(readme);
+return(readme);
 }
 
 module.exports = generateMarkdown;
