@@ -39,7 +39,7 @@ const questions = [
 			{name: 'BSD 2-Clause "Simplified" License', value: 'bsd2'},
 			{name: 'BSD 3-Clause "New" or "Revised" License', value: 'bsd3'},
 			{name: 'Boost Software License 1.0', value: 'boost'},
-			{name: 'Creative Commons Zero v1.0 Universal', value: 'cc'},
+			{name: 'Creative Commons Zero v1.0 Universal',value: 'cc'},
 			{name: 'Eclipse Public License 2.0', value: 'epl20'},
 			{name: 'GNU Affero General Public License v3.0', value: 'agpl30'},
 			{name: 'GNU General Public License v2.0', value: 'gpl20'},
