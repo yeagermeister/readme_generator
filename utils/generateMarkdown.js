@@ -44,12 +44,12 @@ ${data.description}`;
 	const toc = `
 Table of Contents
 =================
-* [Installation Instructions](#s)
-* [Usage Instructions](## Usage)
-* [Contribution Guidelines](## Contribution Guidelines)
-* [Testing Instructions](## Testing Instructions)
-* [License Inforamtion](## License Inforamtion)
-* [Questions](#markdown-header-questions)`
+* [Installation Instructions](#installation-instructions)
+* [Usage Instructions](#usage)
+* [Contribution Guidelines](#contribution-guidelines)
+* [Testing Instructions](#testing-instructions)
+* [License Inforamtion](#license-inforamtion)
+* [Questions](#questions)`
 	const install = `## Installation Instructions\n	${data.install}`;
 	const usage = `## Usage
 	${data.usage}`;

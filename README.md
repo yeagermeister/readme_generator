@@ -1,15 +1,15 @@
 # t
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)     
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)     
 t
 
 Table of Contents
 =================
-* [Installation Instructions](#s)
-* [Usage Instructions](## Usage)
-* [Contribution Guidelines](## Contribution Guidelines)
-* [Testing Instructions](## Testing Instructions)
-* [License Inforamtion](## License Inforamtion)
-* [Questions](#markdown-header-questions)
+* [Installation Instructions](#installation-instructions)
+* [Usage Instructions](#usage)
+* [Contribution Guidelines](#contribution-guidelines)
+* [Testing Instructions](#testing-instructions)
+* [License Inforamtion](#license-inforamtion)
+* [Questions](#questions)
 ## Installation Instructions
 	t
 ## Usage
@@ -19,9 +19,9 @@ Table of Contents
 ## Testing instructions
 	t
 ## License Inforamtion
-This project is covered under the GNU General Public License v3.0
+This project is covered under the MIT License
 
-	https://www.gnu.org/licenses/gpl-3.0
+	https://opensource.org/licenses/MIT
 ## Questions
 [Github](https://github.com/t/)
 	Email: t
