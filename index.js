@@ -28,9 +28,25 @@ const questions = [
 		message: 'Enter test instructions:',
 		name: 'test'
 		},
-		{type: 'input',
+		{type: 'checkbox',
 		message: 'Choose a license:',
-		name: 'license'
+		name: 'license',
+		choices: [
+			{name: 'None'},
+			{name: 'Apache License 2.0'},
+			{name: 'GNU General Public License v3.0'},
+			{name: 'MIT License'},
+			{name: 'BSD 2-Clause "Simplified" License'},
+			{name: 'BSD 3-Clause "New" or "Revised" License'},
+			{name: 'Boost Software License 1.0'},
+			{name: 'Creative Commons Zero v1.0 Universal'},
+			{name: 'Eclipse Public License 2.0'},
+			{name: 'GNU Affero General Public License v3.0'},
+			{name: 'GNU General Public License v2.0'},
+			{name: 'GNU Lesser General Public License v2.1'},
+			{name: 'Mozilla Public License 2.0'},
+			{name: 'The Unlicense'}
+		]
 		},
 		{type: 'input',
 		message: 'What is your github username?',
@@ -44,9 +60,9 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, answers) {
-	console.log(fileName, answers);
-	fs.writeFile(`./${fileName}`, `${answers.email}`, (err) =>
+function writeToFile(answers) {
+	console.log(answers);
+	fs.writeFile(`./README.md`, `${answers.email}`, (err) =>
 	err ? console.error(err) : console.log('README.md created!')
 	);
 }
@@ -54,7 +70,7 @@ function writeToFile(fileName, answers) {
 // TODO: Create a function to initialize app
 function init() {
 	inquirer.prompt(questions).then((answers) => {
-		writeToFile("README.md", answers);
+		writeToFile(answers);
 	});
 };
 
