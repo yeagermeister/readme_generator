@@ -1,5 +1,4 @@
-# t
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)     
+# none
 t
 
 Table of Contents
@@ -19,9 +18,9 @@ Table of Contents
 ## Testing instructions
 	t
 ## License Inforamtion
-This project is covered under the MIT License
-
-	https://opensource.org/licenses/MIT
+	This project is not covered under a software license
 ## Questions
 [Github](https://github.com/t/)
+
+	
 	Email: t

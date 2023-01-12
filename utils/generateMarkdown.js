@@ -1,3 +1,6 @@
+let lic = "";
+let description = "";
+
 //A function that returns a license badge and url, based on which license is passed in
 function renderLicenseBadge(license) {
 	let licenseArray = [
@@ -31,16 +34,23 @@ function renderLicenseBadge(license) {
 function generateMarkdown(data) {
 	let license = data.license.toString();
 
-	// If there is no license, return an empty string
+	// If there is no license, return an empty string.  Take care of the licensing info here, so we don't need antoher if statement.
 	if (license) {
 		license = renderLicenseBadge(license);
-	} else license = 'none';
-
+		 lic = `## License Inforamtion
+	This project is covered under the ${license[2]}\n
+	${license[1]}`;
+		description = `${license[0]}     
+	${data.description}`;
+	} else {
+		lic = `## License Inforamtion
+	This project is not covered under a software license`
+		description = `${data.description}`;
+	};
+	
 	// Load the different sections into variables.   
-	// Generate a TOC
 	const title = `# ${data.name}`;
-	const description = `${license[0]}     
-${data.description}`;
+
 	const toc = `
 Table of Contents
 =================
@@ -57,11 +67,9 @@ Table of Contents
 	${data.contrib}`;
 	const test = `## Testing instructions
 	${data.test}`;
-	const lic = `## License Inforamtion
-This project is covered under the ${license[2]}\n
-	${license[1]}`;
 	const questions = `## Questions
-[Github](https://github.com/${data.github}/)
+[Github](https://github.com/${data.github}/)\n
+	
 	Email: ${data.email}`;
 
 	// load all of the sections into one variable to pass back
