@@ -3,7 +3,7 @@
 	A video of this app in action can be found at
 	https://drive.google.com/file/d/1Uy8ptV2cVw1xLdG_ZMcuQvkktpWe98Vi/view
 	
-	High quality READMEs are important for open source projects on GitHub.  They should include installation, usage and testing instructions, as well as license information, and ways to contact the the team workng on the project. This generator will prompt you for information to create such a README.
+High quality READMEs are important for open source projects on GitHub.  They should include installation, usage and testing instructions, as well as license information, and ways to contact the the team workng on the project. This generator will prompt you for information to create such a README.
 
 Table of Contents
 =================
